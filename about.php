@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เกี่ยวกับเรา | OGGY</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<!-- HEADER (ใช้ของเดิมได้เลย) -->
+<header class="header">
+    <div class="header-inner">
+        <a href="index.php" class="logo">
+            <img src="png/oggy.png" alt="OGGY">
+        </a>
+
+        <nav class="nav">
+            <a href="#">หน้าหลัก</a>
+            <a href="#">ค้นหา</a>
+            <a href="#">บทความ</a>
+            <a href="#">รีวิวล่าสุด</a>
+            <a href="#">ติดต่อเรา</a>
+            <a href="#" class="active">เกี่ยวกับเรา</a>
+            <a href="#">อื่นๆ</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="ค้นหา">
+        </div>
+    </div>
+</header>
+<section class="about-tech-pro">
+    <div class="about-tp-wrap">
+
+        <div class="about-tp-head">
+            <span class="about-tp-tag">ABOUT OGGY</span>
+            <h1>เกี่ยวกับเรา</h1>
+        </div>
+
+        <p class="about-tp-slogan">
+            ถ้าคุณชอบโน้ตบุ๊ก เราคือเพื่อนกัน
+        </p>
+
+        <div class="about-tp-content">
+            <p>
+                <strong>OGGY</strong> คือแพลตฟอร์มข้อมูลด้านโน้ตบุ๊ก
+                ที่ออกแบบมาเพื่อช่วยให้ผู้ใช้งานเลือกเครื่องที่
+                <span class="tp-mark">เหมาะกับการใช้งานจริง</span>
+                มากที่สุด ไม่ใช่แค่แรง แต่ต้องตอบโจทย์
+            </p>
+
+            <p>
+                เรานำเสนอข้อมูลจากการวิเคราะห์การใช้งานจริง
+                ครอบคลุมทั้งการเรียน การทำงาน งานกราฟิก
+                การเล่นเกม และการใช้งานทั่วไป
+                โดยยึดหลักความเป็นกลางและความคุ้มค่า
+            </p>
+
+            <p>
+                เป้าหมายของเราคือการลดความซับซ้อนของข้อมูล
+                เพื่อให้คุณตัดสินใจได้อย่างมั่นใจ
+                และได้โน้ตบุ๊กที่เหมาะสมกับงบประมาณมากที่สุด
+            </p>
+        </div>
+
+        <div class="about-tp-quote">
+            <p>
+                โน้ตบุ๊กที่ดี<br>
+                คือเครื่องมือที่พาคุณไปได้ไกลกว่าเดิม
+            </p>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,166 @@
+/* ================= ABOUT : BACKGROUND IMAGE ================= */
+.about-tech-pro {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px;
+
+    /* 🔥 พื้นหลังเป็นภาพ + overlay */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.404),
+            rgba(0, 0, 0, 0.404)
+        ),
+        url("png/W1.png") center / cover no-repeat;
+
+    font-family: 'Kanit', sans-serif;
+}
+
+/* ===== CARD ===== */
+.about-tp-wrap {
+    max-width: 920px;
+    width: 100%;
+    background: #ffffff;
+    padding: 72px 80px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow:
+        0 28px 70px rgba(0,0,0,0.16),
+        0 8px 22px rgba(0,0,0,0.10);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* เส้นเรืองแสงบาง ๆ */
+.about-tp-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1px;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,0,0,0.35),
+        transparent
+    );
+-webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+
+opacity: 0.35;
+pointer-events: none;
+
+}
+
+/* Hover ยกนิดเดียว */
+.about-tp-wrap:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 36px 90px rgba(0,0,0,0.18),
+        0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* ===== HEADER ===== */
+.about-tp-head {
+    margin-bottom: 18px;
+}
+
+.about-tp-tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2.2px;
+    font-weight: 500;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.about-tp-head h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    color: #111;
+    position: relative;
+}
+
+.about-tp-head h1::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 4px;
+    margin-top: 14px;
+    background: linear-gradient(90deg, #000, #666);
+    border-radius: 2px;
+}
+
+/* ===== SLOGAN ===== */
+.about-tp-slogan {
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 40px;
+    padding-left: 14px;
+    position: relative;
+}
+
+.about-tp-slogan::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 70%;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* ===== CONTENT ===== */
+.about-tp-content p {
+    font-size: 15.6px;
+    line-height: 1.95;
+    color: #333;
+    margin-bottom: 22px;
+}
+
+/* Highlight */
+.tp-mark {
+    font-weight: 500;
+    background: linear-gradient(
+        transparent 60%,
+        rgba(0,0,0,0.12) 0
+    );
+    padding: 0 4px;
+}
+
+/* ===== QUOTE ===== */
+.about-tp-quote {
+    margin-top: 48px;
+    padding: 28px 32px;
+    border-left: 3px solid #000;
+    background: linear-gradient(135deg, #f5f5f5, #ffffff);
+    border-radius: 12px;
+    position: relative;
+}
+
+.about-tp-quote::before {
+    content: "“";
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    font-size: 80px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.08);
+}
+
+.about-tp-quote p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.6;
+}

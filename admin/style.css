@@ -1,0 +1,122 @@
+/* ================= RESET ================= */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f2f2f2;
+    font-family: 'Kanit', sans-serif;
+    color: #111;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.15px;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.header-inner {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 12px;
+}
+
+/* ================= LOGO ================= */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+}
+
+.logo img {
+    height: 34px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.06);
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
+/* ================= MENU ================= */
+.nav {
+    display: flex;
+    gap: 22px;
+    margin-left: 28px;
+    align-items: center;
+}
+
+.nav a {
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    padding: 6px 0;
+    letter-spacing: 0.25px;
+    transition: color 0.25s ease;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #000, #666);
+    transition: width 0.25s ease;
+    transform: translateX(-50%);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ================= SEARCH ================= */
+.search {
+    margin-left: auto;
+}
+
+.search input {
+    width: 160px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid #d0d0d0;
+    padding: 0 14px;
+    background: rgba(255,255,255,0.8);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.search input:focus {
+    width: 220px;
+    background: #ffffff;
+    border-color: #000;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.search input::placeholder {
+    color: #aaa;
+}
