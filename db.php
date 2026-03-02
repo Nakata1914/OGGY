@@ -1,8 +1,8 @@
 <?php
-    $h = "127.0.0.1";
-    $u = "root";
-    $p = "";
-    $db = "db_n";
+    $h = "sql304.infinityfree.com";
+    $u = "if0_41229423";
+    $p = "NAT0992726700A";
+    $db = "if0_41229423_db_n";
 
     $conn = new mysqli($h,$u,$p,$db);
 

@@ -62,16 +62,48 @@ $row = $result->fetch_assoc();
                 <p><strong>RAM : </strong> <?php echo $row['memory']; ?></p>
                 <p><strong>SSD : </strong> <?php echo $row['storage']; ?></p>
                 <p><strong>DP : </strong> <?php echo $row['screen_size']; ?></p>
-                <div style="width:82%; border:2px background:#f9f9f9;">
-                <p><strong>DP : </strong> <?php echo $row['description']; ?></p>
+                <div style="width:82%; border:1px solid #f9f9f9;"> 
+                <p><strong></strong> <?php echo $row['description']; ?></p>
                 </div>
+<div style="width:48%; border:1px solid  padding: 5px 5px 5px 5px;">
 
-                
-                <h2 style="color:red;">
-                    <?php echo number_format($row['price']); ?> บาท
-                </h2>
-                
+<div style="margin-top:20px; ">
+
+    <a href="<?php echo $row['external_link']; ?>" target="_blank" style="
+        display:block;
+        text-decoration:none;
+        border:1px solid #ddd;
+        padding: 5px 5px 5px 5px ;
+        border-radius:8px;
+        background:white;
+        transition:0.3s;
+    ">
+
+        <h2 style="
+        color:red;
+        display:flex;
+        align-items:center;
+        gap:10px;
+        margin:0;
+        padding: 0.1px 5px 0.1px 5px ;
+    ">
+        <img src="../png/jib.png" 
+             style="height:40px; object-fit:contain;">
+             
+        <?php echo number_format($row['price']); ?> บาท
+
+        <p style="color:#555; font-size:15px;">
+            คลิกเพื่อดูรายละเอียด
+        </p>
+    </h2>
+
+    </a>
+
+</div></div>
         </div>
+
+       
+
     </div>
 
     <hr style="border:1px solid #ccc; margin: 20px 10px 20px 10px;">
