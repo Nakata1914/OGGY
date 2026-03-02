@@ -1,3 +1,33 @@
+<?php
+session_start();
+include('db.php');
+
+$error = false;
+
+if (isset($_POST['login'])) {
+    $user_email = $_POST['user_email'];
+    $user_password = $_POST['user_password'];
+
+    // ใช้ Prepared Statement เพื่อความปลอดภัยจากการ SQL Injection
+    $stmt = $conn->prepare("SELECT * FROM users WHERE user_email = ? AND user_password = ?");
+    $stmt->bind_param("ss", $user_email, $user_password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+if ($result->num_rows == 1) {
+    $rs = $result->fetch_assoc();
+
+    $_SESSION['user_id']    = $rs['id'];
+    $_SESSION['user_name']  = $rs['user_name'];
+    $_SESSION['user_email'] = $rs['user_email'];
+    $_SESSION['user_role']  = $rs['user_role'];  // ⭐ สำคัญ
+
+    header("Location: admin/home.php");
+    exit();
+}
+
+}
+?>
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -15,27 +45,17 @@
 
 <header class="header">
     <div class="header-inner">
-
-        <!-- LOGO HEADER -->
         <a href="index.php" class="logo">
             <img src="png/oggy.png" alt="OGGY">
         </a>
 
-        <!-- MENU -->
         <nav class="nav">
-            <a href="#">หน้าหลัก</a>
-            <a href="#">ค้นหา</a>
-            <a href="#">บทความ</a>
-            <a href="#">รีวิวล่าสุด</a>
-            <a href="#">ติดต่อเรา</a>
-            <a href="#">เกี่ยวกับเรา</a>
-            <a href="#">อื่นๆ</a>
+            <a href="home.php">หน้าหลัก</a>  
+            <a href="list.php">รายการโน๊ตบุ๊ค</a>
+            <a href="contact.php">ติดต่อเรา</a>
+            <a href="about.php">เกี่ยวกับเรา</a>
+            <a href="login.php">อื่นๆ</a>
         </nav>
-
-        <!-- SEARCH -->
-        <div class="search">
-            <input type="text" placeholder="ค้นหา">
-        </div>
 
     </div>
 </header>
@@ -49,14 +69,21 @@
 
         <p class="login-text">ล็อกอินเข้าสู่ระบบแอดมิน</p>
 
-        <input type="email" id="email" placeholder="กรุณากรอกอีเมล">
+            <form method="POST" action="">
 
-        <div class="password-wrap">
-            <input type="password" id="password" placeholder="กรุณากรอกรหัสผ่าน">
-            <span class="eye" onclick="togglePassword()">👁</span>
-        </div>
+                <input type="email" name="user_email" placeholder="กรุณากรอกอีเมล" required>
 
-        <button class="login-btn" onclick="login()">เข้าสู่ระบบ</button>
+                <div class="password-wrap">
+                    <input type="password" name="user_password" id="password" placeholder="กรุณากรอกรหัสผ่าน" required>
+                    <span class="eye" onclick="togglePassword()">👁</span>
+                </div>
+
+                <button type="submit" name="login" class="login-btn">
+                    เข้าสู่ระบบ
+                </button>
+
+            </form>
+
 
     </div>
 </div>
@@ -67,17 +94,6 @@ function togglePassword() {
     p.type = (p.type === "password") ? "text" : "password";
 }
 
-function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    if (email === "admin@gmail.com" && password === "123456") {
-        alert("เข้าสู่ระบบสำเร็จ");
-        window.location.href = "admin/home.php"; // หน้าแอดมิน
-    } else {
-        alert("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
-    }
-}
 </script>
 
 

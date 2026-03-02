@@ -1,0 +1,76 @@
+/* ===== ADD NOTEBOOK PAGE ===== */
+
+.admin-wrapper{
+    max-width:1200px;
+    margin:40px auto;
+    background:#ffffff;
+    padding:40px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.admin-title{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:26px;
+    font-weight:600;
+}
+
+/* GRID */
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.form-col{
+    display:flex;
+    flex-direction:column;
+}
+
+/* INPUT STYLE */
+.admin-form input,
+.admin-form select,
+.admin-form textarea{
+    padding:12px;
+    margin-bottom:14px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    font-family:'Kanit',sans-serif;
+}
+
+.admin-form textarea{
+    height:90px;
+}
+
+/* FOCUS EFFECT */
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus{
+    outline:none;
+    border-color:#111;
+}
+
+/* BUTTON */
+.save-btn{
+    width:100%;
+    padding:15px;
+    background:#111;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#333;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+}

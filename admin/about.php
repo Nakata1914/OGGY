@@ -1,37 +1,43 @@
+<?php
+
+include("check_admin.php");
+
+?>
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>เกี่ยวกับเรา | OGGY</title>
+    <title>เกี่ยวกับเรา</title>
 
+    <!-- ฟอนต์ -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../about.css">
 </head>
 <body>
 
-<!-- HEADER (ใช้ของเดิมได้เลย) -->
 <header class="header">
     <div class="header-inner">
-        <a href="index.php" class="logo">
-            <img src="png/oggy.png" alt="OGGY">
+
+        <!-- LOGO (คลิกกลับหน้าแรก) -->
+        <a href="home.php" class="logo">
+            <img src="../png/oggy.png" alt="OGGY">
         </a>
 
+        <!-- เมนู -->
         <nav class="nav">
-            <a href="home.php">หน้าหลัก</a>
-            <a href="#">บทความ</a>
-            <a href="#">รีวิวล่าสุด</a>
+            <a href="home.php">หน้าหลัก</a>  
+            <a href="list.php">รายการโน๊ตบุ๊ค</a>
             <a href="contact.php">ติดต่อเรา</a>
             <a href="about.php">เกี่ยวกับเรา</a>
-            <a href="#">อื่นๆ</a>
-            <a href="#">แก้ไขข้อมูล</a>
+            <a href="uploads.php">เพิ่มข้อมูล</a>
+            <a href="logout.php">ออกจากระบบ</a>
         </nav>
 
-        <div class="search">
-            <input type="text" placeholder="ค้นหา">
-        </div>
     </div>
 </header>
+
 <section class="about-tech-pro">
     <div class="about-tp-wrap">
 

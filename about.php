@@ -18,18 +18,13 @@
         </a>
 
         <nav class="nav">
-            <a href="#">หน้าหลัก</a>
-            <a href="#">ค้นหา</a>
-            <a href="#">บทความ</a>
-            <a href="#">รีวิวล่าสุด</a>
-            <a href="#">ติดต่อเรา</a>
-            <a href="#" class="active">เกี่ยวกับเรา</a>
-            <a href="#">อื่นๆ</a>
+            <a href="home.php">หน้าหลัก</a>  
+            <a href="list.php">รายการโน๊ตบุ๊ค</a>
+            <a href="contact.php">ติดต่อเรา</a>
+            <a href="about.php">เกี่ยวกับเรา</a>
+            <a href="login.php">อื่นๆ</a>
         </nav>
 
-        <div class="search">
-            <input type="text" placeholder="ค้นหา">
-        </div>
     </div>
 </header>
 <section class="about-tech-pro">
